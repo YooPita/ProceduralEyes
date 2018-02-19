@@ -6,12 +6,12 @@ Eyes follow the object "EyeController".
 
 How to use:
 * Create the "EyeBalls" object, it will contain all the objects of the eyes.
-* Create an "EyeController" inside.
-* Then create objects for the eyes. And inside for pupils.
-* On the "EyeController" object install the script.
-* In the script add the desired number of eyes and in each place the object of the eye.
+* Create an "EyeController" inside the object.
+* Create objects for the eyes. And another inside for pupils.
 
 ![](https://img-fotki.yandex.ru/get/904305/211995406.0/0_196eee_d8e670e1_X5L)
+* Install the script on the "EyeController" object.
+* Add the desired number of eyes in the script and the objects of the eye in each.
 * In "MaxZFar" specify the distance for the eyes (example -5).
 * In the radius of the eyes, specify the radius by which the eye should move (example 0.5).
 
