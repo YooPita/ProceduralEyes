@@ -26,7 +26,10 @@ public class ProceduralEyes : MonoBehaviour
             controller = Vector2.Lerp(a.eye.localPosition, transform.localPosition, lerpVal / 2);
 
             var leftPos = Vector2.ClampMagnitude(controller - (Vector2)a.eye.localPosition, a.radius);//Normalization
-            leftPos.x *= Mathf.Sign(a.eye.localPosition.x);//Side of Eye. IDK how to do it differently...
+            if (Vector3.Angle(a.eye.transform.forward, a.eye.transform.localPosition) < 60)
+            {
+                leftPos.x *= -1;
+            }
 
             a.eye.GetChild(0).localPosition = leftPos;//The first child is the pupil 
         }
