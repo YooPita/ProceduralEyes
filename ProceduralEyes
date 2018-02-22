@@ -26,7 +26,7 @@ public class ProceduralEyes : MonoBehaviour
             controller = Vector2.Lerp(a.eye.localPosition, transform.localPosition, lerpVal / 2);
 
             var leftPos = Vector2.ClampMagnitude(controller - (Vector2)a.eye.localPosition, a.radius);//Normalization
-            if (Vector3.Angle(a.eye.transform.forward, a.eye.transform.localPosition) < 60)
+            if (Quaternion.Angle(a.eye.rotation, transform.rotation) > 60)
             {
                 leftPos.x *= -1;
             }
